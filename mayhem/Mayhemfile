@@ -1,0 +1,9 @@
+project: msgspec
+
+target: fuzz_msgspec
+
+image: ghcr.io/busescanfly/msgspec:latest
+
+cmds:
+    - cmd: /src/mayhem/fuzz_msgspec.py
+      libfuzzer: true
