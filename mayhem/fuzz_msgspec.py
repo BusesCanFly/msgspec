@@ -21,7 +21,7 @@ def test_input(input_bytes):
             # groups: Set[str] = set()
             # email: Optional[str] = None
 
-        alice = User(input_string, groups={input_string, input_string})
+        alice = User(input_string)
         # msg = msgspec.json.encode(alice)
         # msgspec.json.decode(msg, type=User)
     except msgspec.ValidationError:
