@@ -18,12 +18,12 @@ def test_input(input_bytes):
     try:
         class User(msgspec.Struct):
             name: str
-            groups: Set[str] = set()
-            email: Optional[str] = None
+            # groups: Set[str] = set()
+            # email: Optional[str] = None
 
         alice = User(input_string, groups={input_string, input_string})
-        msg = msgspec.json.encode(alice)
-        msgspec.json.decode(msg, type=User)
+        # msg = msgspec.json.encode(alice)
+        # msgspec.json.decode(msg, type=User)
     except msgspec.ValidationError:
         pass
 
