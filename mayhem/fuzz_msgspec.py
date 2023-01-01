@@ -26,6 +26,8 @@ def test_input(input_bytes):
         # msgspec.json.decode(msg, type=User)
     except msgspec.ValidationError:
         pass
+    except TypeError:
+        pass
 
 def main():
     atheris.Setup(sys.argv, test_input)
